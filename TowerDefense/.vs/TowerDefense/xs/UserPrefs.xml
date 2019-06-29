@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/WaveSpawner.cs">
+    <Files>
+      <File FileName="Assets/Scripts/WaveSpawner.cs" Line="25" Column="44" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ac8d8f79-de97-48ea-93dc-4433b769ea3b" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

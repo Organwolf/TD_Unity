@@ -28,9 +28,40 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4226650579252963195}
+  - {fileID: 8222975897833740640}
   m_Father: {fileID: 808114419570744785}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!1 &3141610372210236017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8222975897833740640}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8222975897833740640
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3141610372210236017}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.59, z: 2.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8837498812503328272}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3537560921320139537
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,6 +150,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 808114419570744785}
+  - component: {fileID: 6499559952078923044}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -142,6 +174,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6499559952078923044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4426376599041241026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dd6399901a84b8b9a3513cc46095b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 7.99
+  fireRate: 1
+  fireCountdown: 0
+  enemyTag: Enemy
+  turnSpeed: 10
+  partToRotate: {fileID: 8837498812503328272}
+  bulletPrefab: {fileID: 5807914041069128992, guid: 31f4ee9981759ce43bef6c64aaef6b2b,
+    type: 3}
+  firePoint: {fileID: 8222975897833740640}
 --- !u!1 &8276131354327092255
 GameObject:
   m_ObjectHideFlags: 0

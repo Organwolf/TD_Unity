@@ -1,19 +1,25 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
-    // finding a taget
-    // rotating towards target
-
     private Transform target;
+
+    [Header("Attributes")]
     [SerializeField] float range = 15f;
-    [SerializeField] Transform partToRotate;
+    [SerializeField] float fireRate = 1f;
+    private float fireCountdown = 2f;
+
+    [Header("Unity Setup Fields")]
+    [SerializeField] string enemyTag = "Enemy";
+
     [SerializeField] float turnSpeed = 10f;
-    public string enemyTag = "Enemy";
+    [SerializeField] Transform partToRotate;
 
+    [SerializeField] GameObject bulletPrefab;
+    [SerializeField] Transform firePoint;
 
-    // Start is called before the first frame update
     void Start()
     {
         // invoke a function to repeat it 0.5 seconds
@@ -28,12 +34,30 @@ public class Turret : MonoBehaviour
             return;
         }
 
-        // rotate around partToRotates y-axis
+        /* Rotate around partToRotates y-axis with Lerp smoothing */
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
-        // rotation smoothing
         Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+
+        if (fireCountdown <= 0)
+        {
+            Shoot();
+            fireCountdown = 1f / fireRate;
+        }
+
+        fireCountdown -= Time.deltaTime;
+    }
+
+    private void Shoot()
+    {
+        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
+
+        if (bullet != null)
+        {
+            bullet.Seek(target);
+        }
     }
 
     // a unity callback function

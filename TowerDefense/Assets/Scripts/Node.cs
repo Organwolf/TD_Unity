@@ -6,6 +6,9 @@ public class Node : MonoBehaviour
 {
 
     [SerializeField] Color hoverColor;
+    [SerializeField] Vector3 postionOffset;
+
+    private GameObject turret;
 
     private Renderer rend;
     private Color startColor;
@@ -25,5 +28,17 @@ public class Node : MonoBehaviour
     private void OnMouseExit()
     {
         rend.material.color = startColor;
+    }
+
+    private void OnMouseDown()
+    {
+        if (turret != null)
+        {
+            Debug.Log("Can't build here");
+            return;
+        }
+
+        GameObject turretTobuild = BuildManager.instance.GetTurretToBuild();
+        turret = (GameObject)Instantiate(turretTobuild, transform.position + postionOffset, transform.rotation);
     }
 }

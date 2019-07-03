@@ -9,8 +9,9 @@ public class Turret : MonoBehaviour
     private Transform target;
     [SerializeField] float range = 15f;
     [SerializeField] Transform partToRotate;
-
+    [SerializeField] float turnSpeed = 10f;
     public string enemyTag = "Enemy";
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,9 +28,12 @@ public class Turret : MonoBehaviour
             return;
         }
 
-        // rotate stuff
-        Vector3 
-
+        // rotate around partToRotates y-axis
+        Vector3 dir = target.position - transform.position;
+        Quaternion lookRotation = Quaternion.LookRotation(dir);
+        // rotation smoothing
+        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
+        partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
     }
 
     // a unity callback function

@@ -1,13 +1,5 @@
 ﻿<Properties StartupConfiguration="{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PlayerStats.cs">
-    <Files>
-      <File FileName="Assets/Scripts/Turret.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BuildManager.cs" />
-      <File FileName="Assets/Scripts/Node.cs" />
-      <File FileName="Assets/Scripts/TurretBluePrint.cs" />
-      <File FileName="Assets/PlayerStats.cs" Line="8" Column="32" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ac8d8f79-de97-48ea-93dc-4433b769ea3b" />

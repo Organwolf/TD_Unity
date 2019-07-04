@@ -7,6 +7,7 @@ public class Node : MonoBehaviour
 {
 
     [SerializeField] Color hoverColor;
+    [SerializeField] Color notEnoughMoneyColor;
     public Vector3 positionOffset;
 
     [Header("Optional")]
@@ -40,7 +41,16 @@ public class Node : MonoBehaviour
             // if we don't have a turret to build we don't highlight the node
             return;
         }
-        rend.material.color = hoverColor;
+
+        if (buildManager.HasMoney)
+        {
+            rend.material.color = hoverColor;
+        }
+        else
+        {
+            rend.material.color = notEnoughMoneyColor;
+
+        }
     }
 
     private void OnMouseExit()

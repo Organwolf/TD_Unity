@@ -3164,8 +3164,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 52.799988}
-  m_SizeDelta: {x: 0, y: 105.5}
+  m_AnchoredPosition: {x: 0, y: 38.3}
+  m_SizeDelta: {x: 0, y: 76.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &264658035
 MonoBehaviour:
@@ -3241,6 +3241,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f8c64e10be9bb4588f3ff0f1105df8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  standardTurret:
+    prefab: {fileID: 4426376599041241026, guid: bb1209f9a3bf146b4be89512180e6da9,
+      type: 3}
+    cost: 100
+  missileLauncher:
+    prefab: {fileID: 7450360621971951894, guid: 9e21959dbfde442eb978c59c4f1f30c0,
+      type: 3}
+    cost: 200
 --- !u!1001 &282858537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4077,6 +4085,7 @@ GameObject:
   - component: {fileID: 434136517}
   - component: {fileID: 434136516}
   - component: {fileID: 434136518}
+  - component: {fileID: 434136519}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -4109,7 +4118,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434136515}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -31.874146, y: -19.518349, z: -10.212936}
+  m_LocalPosition: {x: -31.874146, y: -19.46, z: -10.212936}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4131,6 +4140,19 @@ MonoBehaviour:
     type: 3}
   missileLauncherPrefab: {fileID: 7450360621971951894, guid: 9e21959dbfde442eb978c59c4f1f30c0,
     type: 3}
+--- !u!114 &434136519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434136515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91a94ac9f72104ea49f71aaf1e8387da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startMoney: 400
 --- !u!1001 &435525749
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7948,13 +7970,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.53729963, y: 0, z: 0, w: 0.8433915}
-  m_LocalPosition: {x: -31, y: 114, z: -79}
+  m_LocalRotation: {x: 0.44775915, y: 0, z: 0, w: 0.8941542}
+  m_LocalPosition: {x: -34.9, y: 71.4, z: -94.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 65, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 53.2, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7970,7 +7992,7 @@ MonoBehaviour:
   panSpeed: 30
   panBoarderThicknes: 10
   scrollSpeed: 5
-  minY: 10
+  minY: 20
   maxY: 120
 --- !u!1001 &971645256
 PrefabInstance:
@@ -11256,7 +11278,7 @@ PrefabInstance:
     - target: {fileID: 3230588227367988710, guid: 5dd6659d776c18c4b9464b8fce2fae5c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PurchaseMissileLauncher
+      value: SelectMissileLauncher
       objectReference: {fileID: 0}
     - target: {fileID: 3230588227367988710, guid: 5dd6659d776c18c4b9464b8fce2fae5c,
         type: 3}
@@ -17750,7 +17772,7 @@ PrefabInstance:
     - target: {fileID: 3230588227367988710, guid: 5dd6659d776c18c4b9464b8fce2fae5c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PurchaseStandardTurret
+      value: SelectStandardTurret
       objectReference: {fileID: 0}
     - target: {fileID: 3230588227367988710, guid: 5dd6659d776c18c4b9464b8fce2fae5c,
         type: 3}

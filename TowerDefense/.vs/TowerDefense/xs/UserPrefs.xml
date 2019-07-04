@@ -1,10 +1,11 @@
 ﻿<Properties StartupConfiguration="{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Bullet.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PlayerStats.cs">
     <Files>
-      <File FileName="Assets/Scripts/Turret.cs" Line="100" Column="1" />
-      <File FileName="Assets/Scripts/Shop.cs" Line="19" Column="73" />
-      <File FileName="Assets/Scripts/BuildManager.cs" Line="11" Column="44" />
-      <File FileName="Assets/Scripts/Bullet.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Turret.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BuildManager.cs" />
+      <File FileName="Assets/Scripts/Node.cs" />
+      <File FileName="Assets/Scripts/TurretBluePrint.cs" />
+      <File FileName="Assets/PlayerStats.cs" Line="8" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

@@ -16,9 +16,6 @@ public class BuildManager : MonoBehaviour
         instance = this;
     }
 
-    public GameObject standardTurretPrefab;
-    public GameObject missileLauncherPrefab;
-
     private TurretBluePrint turretToBuild;
 
     public GameObject buildEffect;
@@ -46,7 +43,5 @@ public class BuildManager : MonoBehaviour
 
         var effect = Instantiate(buildEffect, node.GetBuildPosition(), Quaternion.identity);
         Destroy(effect, 5f);
-
-        //Debug.Log("Turret built! Money left: " + PlayerStats.Money);
     }
 }

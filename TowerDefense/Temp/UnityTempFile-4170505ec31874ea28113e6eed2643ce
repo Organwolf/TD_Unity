@@ -296,6 +296,7 @@
 /define:ENABLE_VSTU
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
+"Assets/GameManger.cs"
 "Assets/LivesUI.cs"
 "Assets/MoneyUI.cs"
 "Assets/PlayerStats.cs"

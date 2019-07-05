@@ -296,13 +296,15 @@
 /define:ENABLE_VSTU
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
-"Assets/MoneyUI.cs"
-"Assets/PlayerStats.cs"
+"Assets/GameManger.cs"
 "Assets/Scripts/BuildManager.cs"
 "Assets/Scripts/Bullet.cs"
 "Assets/Scripts/CameraController.cs"
 "Assets/Scripts/Enemy.cs"
+"Assets/Scripts/LivesUI.cs"
+"Assets/Scripts/MoneyUI.cs"
 "Assets/Scripts/Node.cs"
+"Assets/Scripts/PlayerStats.cs"
 "Assets/Scripts/Shop.cs"
 "Assets/Scripts/Turret.cs"
 "Assets/Scripts/TurretBluePrint.cs"

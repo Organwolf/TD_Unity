@@ -3,13 +3,20 @@ using UnityEngine;
 
 public class GameManger : MonoBehaviour
 {
-    private bool gameEnded = false;
+    public static bool gameIsOver;
+    public GameObject gameOverUI;
+
+    private void Start()
+    {
+        gameIsOver = false;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (gameEnded)
+        if (gameIsOver)
             return;
+
         if (PlayerStats.Lives <= 0)
         {
             EndGame();
@@ -18,8 +25,9 @@ public class GameManger : MonoBehaviour
 
     void EndGame()
     {
-        gameEnded = true;
+
+        gameIsOver = true;
+        gameOverUI.SetActive(true);
         Debug.Log("Game End");
-        // add functionality later
     }
 }

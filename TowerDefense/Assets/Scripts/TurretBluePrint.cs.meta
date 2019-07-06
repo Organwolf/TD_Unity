@@ -1,11 +1,12 @@
-fileFormatVersion: 2
-guid: d3a3d6501cdd34d5ba294cd774857612
-MonoImporter:
-  externalObjects: {}
-  serializedVersion: 2
-  defaultReferences: []
-  executionOrder: 0
-  icon: {instanceID: 0}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+﻿using UnityEngine;
+
+// unity w save and load the values for us
+[System.Serializable]
+public class TurretBlueprint
+{
+    public GameObject prefab;
+    public int cost;
+
+    public GameObject upgradedPrefab;
+    public int upgradeCost;
+}

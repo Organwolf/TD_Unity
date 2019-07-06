@@ -13,7 +13,7 @@ public class Node : MonoBehaviour
     [HideInInspector]
     public GameObject turret;
     [HideInInspector]
-    public TurretBluePrint turretBlueprint;
+    public TurretBlueprint turretBlueprint;
     [HideInInspector]
     public bool isUpgraded = false;
 
@@ -53,7 +53,7 @@ public class Node : MonoBehaviour
         BuildTurret(buildManager.GetTurretToBuild());
     }
 
-    void BuildTurret (TurretBluePrint blueprint)
+    void BuildTurret (TurretBlueprint blueprint)
     {
         if (PlayerStats.Money < blueprint.cost)
         {
@@ -119,6 +119,16 @@ public class Node : MonoBehaviour
         isUpgraded = true;
 
         Debug.Log("Turret upgraded!");
+    }
+
+    public void SellTurret ()
+    {
+        PlayerStats.Money += turretBlueprint.GetSellAmount();
+
+        // Spawn a cool effect
+
+        Destroy(turret);
+        turretBlueprint = null;
     }
         
     private void OnMouseExit()

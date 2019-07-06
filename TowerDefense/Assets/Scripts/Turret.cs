@@ -5,6 +5,7 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
     private Transform target;
+    private Enemy targetEnemy;
 
     [Header("General")]
 
@@ -18,6 +19,10 @@ public class Turret : MonoBehaviour
 
     [Header("Use Laser")]
     public bool useLaser = false;
+
+    public float slowAmount = .5f;
+    public int damageOverTime = 30;
+
     public LineRenderer lineRenderer;
 
     [Header("Unity Setup Fields")]
@@ -81,6 +86,9 @@ public class Turret : MonoBehaviour
 
     void Laser ()
     {
+        targetEnemy.TakeDamage(damageOverTime * Time.deltaTime);
+        targetEnemy.Slow(slowAmount);
+
         if (!lineRenderer.enabled)
             lineRenderer.enabled = true;
 
@@ -109,6 +117,7 @@ public class Turret : MonoBehaviour
 
     // search for targets at a fixed basis
     // so we don't have to update targets every frame
+
     void UpdateTarget()
     {
         // array of enemies
@@ -116,7 +125,7 @@ public class Turret : MonoBehaviour
         float shortestDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
 
-        foreach (var enemy in enemies)
+        foreach (GameObject enemy in enemies)
         {
             float distanceToEnemy = Vector3.Distance(transform.position,
                 enemy.transform.position);
@@ -130,6 +139,7 @@ public class Turret : MonoBehaviour
         if (nearestEnemy != null && shortestDistance <= range)
         {
             target = nearestEnemy.transform;
+            targetEnemy = nearestEnemy.GetComponent<Enemy>();
         } else
         {
             target = null;

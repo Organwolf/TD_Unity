@@ -2,7 +2,6 @@
 
 public class CameraController : MonoBehaviour
 {
-    private bool doMovement = true;
     public float panSpeed = 30f;
     public float panBoarderThicknes = 10f;
     public float scrollSpeed = 5f;
@@ -17,10 +16,6 @@ public class CameraController : MonoBehaviour
         {
             this.enabled = false;
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
-            doMovement = !doMovement;
-        if (!doMovement)
-            return;
         if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBoarderThicknes)
         {
             // doesn't use the physics system

@@ -1,6 +1,12 @@
-
-TowerDefense/Temp/UnityLockfile
-
-TowerDefense/Library/assetDatabase3
+# ================= #
+#   my super cool   #
+#    ignore file    #
+# ================= #
 
 *.lock
+Temp/
+Obj/
+UnityGenerated/
+/Library/
+/Build/
+/Assets/StreamingAssets/

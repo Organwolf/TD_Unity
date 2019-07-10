@@ -4,9 +4,23 @@
 # ================= #
 
 *.lock
-Temp/
-Obj/
-UnityGenerated/
-/Library/
-/Build/
-/Assets/StreamingAssets/
+
+[Tt]emp/
+
+[Oo]bj/
+
+[Bb]uild
+
+/[Bb]uilds/
+
+/[Ll]ibrary/
+
+sysinfo.txt
+
+*.stackdump
+
+/Assets/AssetStoreTools*
+
+*.apk
+
+*.unitypackage

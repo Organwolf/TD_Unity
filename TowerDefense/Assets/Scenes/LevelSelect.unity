@@ -671,6 +671,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df82612b2e892d54087d40c4f08b5529, type: 3}
+--- !u!114 &667142845 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6900293011127646526, guid: df82612b2e892d54087d40c4f08b5529,
+    type: 3}
+  m_PrefabInstance: {fileID: 271010405}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &690610569 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4014302980177349750, guid: df82612b2e892d54087d40c4f08b5529,
@@ -1269,6 +1281,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1725753048 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6900293011127646526, guid: df82612b2e892d54087d40c4f08b5529,
+    type: 3}
+  m_PrefabInstance: {fileID: 4688754482034253914}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1781543888
 GameObject:
   m_ObjectHideFlags: 0
@@ -1378,6 +1402,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fader: {fileID: 1017195419}
+  levelButtons:
+  - {fileID: 1725753048}
+  - {fileID: 667142845}
 --- !u!4 &1798146575
 Transform:
   m_ObjectHideFlags: 0
@@ -1555,6 +1582,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Level01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7130365916348217041, guid: df82612b2e892d54087d40c4f08b5529,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221611871665947475, guid: df82612b2e892d54087d40c4f08b5529,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df82612b2e892d54087d40c4f08b5529, type: 3}

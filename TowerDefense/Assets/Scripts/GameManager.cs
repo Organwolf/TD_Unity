@@ -3,21 +3,19 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static bool gameIsOver;
+    public static bool GameIsOver;
     public GameObject gameOverUI;
-    public string nextLevel = "Level02";
-    public int levelToUnlock = 2;
-    public SceneFader scenFader;
+    public GameObject completeLevelUI;
 
     private void Start()
     {
-        gameIsOver = false;
+        GameIsOver = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (gameIsOver)
+        if (GameIsOver)
             return;
 
         if (PlayerStats.Lives <= 0)
@@ -29,15 +27,14 @@ public class GameManager : MonoBehaviour
     void EndGame()
     {
 
-        gameIsOver = true;
+        GameIsOver = true;
         gameOverUI.SetActive(true);
         Debug.Log("Game End");
     }
 
     public void WinLevel ()
     {
-        Debug.Log("LEVEL WON!");
-        PlayerPrefs.SetInt("levelReached", levelToUnlock);
-        scenFader.FadeTo(nextLevel);
+        GameIsOver = true;
+        completeLevelUI.SetActive(true);
     }
 }

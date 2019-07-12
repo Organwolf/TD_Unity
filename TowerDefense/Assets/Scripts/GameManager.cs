@@ -1,6 +1,10 @@
 ﻿
 using UnityEngine;
 
+
+// Github:
+// https://github.com/Brackeys/Tower-Defense-Tutorial/tree/master/Tower%20Defense%20Unity%20Project/Assets
+
 public class GameManager : MonoBehaviour
 {
     public static bool GameIsOver;

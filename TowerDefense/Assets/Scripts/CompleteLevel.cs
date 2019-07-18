@@ -12,7 +12,15 @@ public class CompleteLevel : MonoBehaviour
     public void Continue()
     {
         PlayerPrefs.SetInt("levelReached", levelToUnlock);
-        sceneFader.FadeTo(nextLevel);
+        if (Application.CanStreamedLevelBeLoaded(nextLevel))
+        {
+            sceneFader.FadeTo(nextLevel);
+        }
+        else
+        {
+            Debug.Log("There is no more levels to load.");
+            sceneFader.FadeTo("LevelSelect");            
+        }
     }
 
     public void Menu()
